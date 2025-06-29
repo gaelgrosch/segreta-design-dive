@@ -9,7 +9,7 @@ const WeddingHeader = () => {
     <header className="bg-transparent">
       <div className="max-w-7xl mx-auto px-8 py-3">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-xl font-light text-black tracking-wide">
+          <Link to="/" className="text-xl font-bold text-black tracking-wide">
             C&G
           </Link>
           <nav className="space-x-12">
