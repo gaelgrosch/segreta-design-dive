@@ -6,11 +6,11 @@ const WeddingHeader = () => {
   const location = useLocation();
   
   return (
-    <header className="bg-white border-b border-black">
-      <div className="max-w-7xl mx-auto px-8 py-6">
+    <header className="bg-transparent">
+      <div className="max-w-7xl mx-auto px-8 py-3">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-xl font-light text-black tracking-wide">
-            Clara & Gaël
+            C&G
           </Link>
           <nav className="space-x-12">
             <Link 

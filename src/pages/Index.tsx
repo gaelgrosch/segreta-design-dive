@@ -5,22 +5,25 @@ import WeddingHeader from '@/components/WeddingHeader';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen relative" style={{ backgroundColor: '#C4704B' }}>
       <WeddingHeader />
       
+      {/* Continuous Dividing Line */}
+      <div className="absolute left-1/2 transform -translate-x-1/2 w-px bg-black hidden lg:block" style={{ top: '88px', bottom: '120px' }}></div>
+      
       <div className="max-w-7xl mx-auto px-8 py-16">
-        {/* Hero Section */}
-        <div className="grid lg:grid-cols-2 gap-16 mb-32">
-          {/* Left Column - Images */}
-          <div className="space-y-8">
-            <div className="w-full h-96 bg-gray-100"></div>
-            <div className="w-full h-64 bg-gray-100"></div>
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left Column - All Images */}
+          <div className="space-y-[25px]">
+            <img src="/photo-1506377247377-2a5b3b417ebb.avif" alt="Wedding venue" className="w-full h-96 object-cover" />
+            <img src="/photo-1603437873662-dc1f44901825.avif" alt="Wedding couple" className="w-full h-64 object-cover" />
+            <img src="/photo-1627826357620-947e0a74f5cc.avif" alt="Wedding details" className="w-full h-80 object-cover" />
           </div>
           
-          {/* Right Column - Text */}
-          <div className="space-y-12">
+          {/* Right Column - All Content */}
+          <div className="space-y-24">
             <div>
-              <h1 className="text-6xl font-light text-black mb-4 tracking-wide">
+              <h1 className="text-black mb-4 uppercase" style={{ fontSize: '68px', lineHeight: '60px', fontWeight: '100', fontFamily: "'Blimone', Helvetica, Arial, sans-serif" }}>
                 Clara & Gaël
               </h1>
               <div className="w-16 h-px bg-black mb-8"></div>
@@ -29,7 +32,7 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="space-y-8">
+            <div className="space-y-32">
               <div>
                 <h2 className="text-lg font-medium text-black mb-2">When</h2>
                 <p className="text-black">Saturday, September 14th, 2025</p>
@@ -43,25 +46,10 @@ const Index = () => {
                 <p className="text-black">Minervois, Languedoc, France</p>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Details Grid */}
-        <div className="grid lg:grid-cols-2 gap-16 mb-32">
-          {/* Left Column - More Images */}
-          <div className="space-y-8">
-            <div className="w-full h-80 bg-gray-100"></div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="h-40 bg-gray-100"></div>
-              <div className="h-40 bg-gray-100"></div>
-            </div>
-          </div>
-          
-          {/* Right Column - Details */}
-          <div className="space-y-12">
+            
             <div>
               <h2 className="text-lg font-medium text-black mb-4">Schedule</h2>
-              <div className="space-y-3">
+              <div className="">
                 <div className="flex justify-between">
                   <span className="text-black">5:00 PM</span>
                   <span className="text-black">Ceremony</span>
@@ -96,10 +84,11 @@ const Index = () => {
             </div>
           </div>
         </div>
+        
+        <div className="mb-32"></div>
 
         {/* RSVP Section */}
         <div className="text-center">
-          <div className="w-16 h-px bg-black mx-auto mb-8"></div>
           <Link 
             to="/rsvp" 
             className="inline-block text-black border border-black px-8 py-3 hover:bg-black hover:text-white transition-colors"
