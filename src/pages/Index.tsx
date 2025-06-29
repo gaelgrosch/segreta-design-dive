@@ -15,9 +15,9 @@ const Index = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column - All Images */}
           <div className="space-y-[25px]">
-            <img src="/photo-1506377247377-2a5b3b417ebb.avif" alt="Wedding venue" className="w-full h-96 object-cover" />
-            <img src="/photo-1603437873662-dc1f44901825.avif" alt="Wedding couple" className="w-full h-64 object-cover" />
-            <img src="/photo-1627826357620-947e0a74f5cc.avif" alt="Wedding details" className="w-full h-80 object-cover" />
+            <img src="./photo-1506377247377-2a5b3b417ebb.avif" alt="Wedding venue" className="w-full h-96 object-cover" />
+            <img src="./photo-1603437873662-dc1f44901825.avif" alt="Wedding couple" className="w-full h-64 object-cover" />
+            <img src="./photo-1627826357620-947e0a74f5cc.avif" alt="Wedding details" className="w-full h-80 object-cover" />
           </div>
           
           {/* Right Column - All Content */}
