@@ -18,7 +18,7 @@ const MinimalInput = ({ placeholder, value, onChange, type = "text", required = 
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         required={required}
-        className="w-full bg-transparent border-0 border-b border-black pb-2 text-black placeholder-gray-400 focus:outline-none focus:border-black"
+        className="w-full bg-transparent border-0 border-b border-black pb-2 text-black placeholder-gray-300 focus:outline-none focus:border-black"
       />
     </div>
   );

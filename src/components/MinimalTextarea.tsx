@@ -16,7 +16,7 @@ const MinimalTextarea = ({ placeholder, value, onChange, rows = 4 }: MinimalText
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         rows={rows}
-        className="w-full bg-transparent border border-black p-3 text-black placeholder-gray-400 focus:outline-none focus:border-black resize-none"
+        className="w-full bg-transparent border border-black p-3 text-black placeholder-gray-300 focus:outline-none focus:border-black resize-none"
       />
     </div>
   );
