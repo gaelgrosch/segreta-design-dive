@@ -102,4 +102,9 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+  
+  html, body {
+    background-color: #C4704B;
+    overscroll-behavior: none;
+  }
 }

@@ -8,8 +8,8 @@ const WeddingHeader = () => {
   return (
     <header className="bg-transparent">
       <div className="max-w-7xl mx-auto px-8 py-3">
-        <div className="flex justify-between items-center">
-          <Link to="/" className="text-xl font-bold text-black tracking-wide">
+        <div className="flex items-center">
+          <Link to="/" className="text-xl font-bold text-black tracking-wide mr-8">
             C&G
           </Link>
           <nav className="space-x-12">

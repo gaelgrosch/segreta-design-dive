@@ -118,15 +118,15 @@ const RSVP = () => {
   ];
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#7A8471' }}>
+    <div className="min-h-screen" style={{ backgroundColor: '#718E98', minHeight: '100vh' }}>
       <WeddingHeader />
       
       <div className="max-w-7xl mx-auto px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left Column - Images */}
           <div className="space-y-[10px]">
-            <img src="./photo-1506377247377-2a5b3b417ebb.avif" alt="Wedding venue" className="w-full h-96 object-cover" />
-            <img src="./photo-1603437873662-dc1f44901825.avif" alt="Wedding couple" className="w-full h-64 object-cover" />
+            <img src="../photo-1603437873662-dc1f44901825.avif" alt="Wedding couple" className="w-full h-64 object-cover" />
+            <img src="../premium_photo-1750864966538-6ffa25bc236a.avif" alt="Wedding venue" className="h-128 w-full object-cover" />
           </div>
           
           {/* Right Column - Form */}

@@ -5,17 +5,18 @@ import WeddingHeader from '@/components/WeddingHeader';
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: '#C4704B' }}>
+    <div className="min-h-screen relative" style={{ backgroundColor: '#C4704B', minHeight: '100vh' }}>
       <WeddingHeader />
       
       {/* Continuous Dividing Line */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 w-px bg-black hidden lg:block" style={{ top: '88px', bottom: '120px' }}></div>
+      <div className="absolute left-1/2 transform -translate-x-1/2 w-px bg-black hidden lg:block" style={{ top: '88px', bottom: '115px' }}></div>
       
-      <div className="max-w-7xl mx-auto px-8 py-16">
+      <div className="max-w-7xl mx-auto px-8 py-8">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column - All Images */}
           <div className="space-y-[25px]">
             <img src="./photo-1506377247377-2a5b3b417ebb.avif" alt="Wedding venue" className="w-full h-96 object-cover" />
+            <img src="./photo-1642427726189-a29ad10a6e36.avif" alt="Wedding venue" className="h-full bject-cover" />
             <img src="./photo-1603437873662-dc1f44901825.avif" alt="Wedding couple" className="w-full h-64 object-cover" />
             <img src="./photo-1627826357620-947e0a74f5cc.avif" alt="Wedding details" className="w-full h-80 object-cover" />
           </div>
@@ -85,10 +86,11 @@ const Index = () => {
           </div>
         </div>
         
-        <div className="mb-32"></div>
+        <div className="mb-8"></div>
 
         {/* RSVP Section */}
         <div className="text-center">
+          <div className="w-full h-px bg-black mb-8"></div>
           <Link 
             to="/rsvp" 
             className="inline-block text-black border border-black px-8 py-3 hover:bg-black hover:text-white transition-colors"
