@@ -7,6 +7,8 @@ import MinimalInput from '@/components/MinimalInput';
 import MinimalRadio from '@/components/MinimalRadio';
 import MinimalCheckbox from '@/components/MinimalCheckbox';
 import MinimalTextarea from '@/components/MinimalTextarea';
+import rsvpImage1 from '/photo-1603437873662-dc1f44901825.avif';
+import rsvpImage2 from '/premium_photo-1750864966538-6ffa25bc236a.avif';
 
 const RSVP = () => {
   const { toast } = useToast();
@@ -128,8 +130,8 @@ const RSVP = () => {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left Column - Images */}
           <div className="space-y-[10px]">
-            <img src="../photo-1603437873662-dc1f44901825.avif" alt="Wedding couple" className="w-full h-64 object-cover" />
-            <img src="../premium_photo-1750864966538-6ffa25bc236a.avif" alt="Wedding venue" className="h-128 w-full object-cover" />
+            <img src={rsvpImage1} alt="Wedding couple" className="w-full h-64 object-cover" />
+            <img src={rsvpImage2} alt="Wedding venue" className="h-128 w-full object-cover" />
           </div>
           
           {/* Right Column - Form */}

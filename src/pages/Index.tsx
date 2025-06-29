@@ -2,6 +2,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import WeddingHeader from '@/components/WeddingHeader';
+import image1 from '/photo-1506377247377-2a5b3b417ebb.avif';
+import image2 from '/photo-1603437873662-dc1f44901825.avif';
+import image3 from '/photo-1627826357620-947e0a74f5cc.avif';
+import image4 from '/photo-1642427726189-a29ad10a6e36.avif';
 
 const Index = () => {
   return (
@@ -15,10 +19,10 @@ const Index = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column - All Images */}
           <div className="space-y-[25px]">
-            <img src="./photo-1506377247377-2a5b3b417ebb.avif" alt="Wedding venue" className="w-full h-96 object-cover" />
-            <img src="./photo-1642427726189-a29ad10a6e36.avif" alt="Wedding venue" className="h-full bject-cover" />
-            <img src="./photo-1603437873662-dc1f44901825.avif" alt="Wedding couple" className="w-full h-64 object-cover" />
-            <img src="./photo-1627826357620-947e0a74f5cc.avif" alt="Wedding details" className="w-full h-80 object-cover" />
+            <img src={image1} alt="Wedding venue" className="w-full h-96 object-cover" />
+            <img src={image4} alt="Wedding venue" className="h-full object-cover" />
+            <img src={image2} alt="Wedding couple" className="w-full h-64 object-cover" />
+            <img src={image3} alt="Wedding details" className="w-full h-80 object-cover" />
           </div>
           
           {/* Right Column - All Content */}
