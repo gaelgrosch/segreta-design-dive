@@ -21,7 +21,7 @@ const Index = () => {
           <div className="space-y-12">
             <div>
               <h1 className="text-6xl font-light text-black mb-4 tracking-wide">
-                Emma & Marco
+                Clara & Gaël
               </h1>
               <div className="w-16 h-px bg-black mb-8"></div>
               <p className="text-xl text-black font-light leading-relaxed">
@@ -32,15 +32,15 @@ const Index = () => {
             <div className="space-y-8">
               <div>
                 <h2 className="text-lg font-medium text-black mb-2">When</h2>
-                <p className="text-black">Saturday, June 15th, 2024</p>
-                <p className="text-black">Ceremony at 4:00 PM</p>
+                <p className="text-black">Saturday, September 14th, 2025</p>
+                <p className="text-black">Ceremony at 5:00 PM</p>
               </div>
               
               <div>
                 <h2 className="text-lg font-medium text-black mb-2">Where</h2>
-                <p className="text-black">Villa Bellavista</p>
-                <p className="text-black">123 Romantic Lane</p>
-                <p className="text-black">Tuscany Hills, Italy</p>
+                <p className="text-black">Château de Minervois</p>
+                <p className="text-black">Route des Vignobles</p>
+                <p className="text-black">Minervois, Languedoc, France</p>
               </div>
             </div>
           </div>
@@ -63,36 +63,36 @@ const Index = () => {
               <h2 className="text-lg font-medium text-black mb-4">Schedule</h2>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="text-black">4:00 PM</span>
+                  <span className="text-black">5:00 PM</span>
                   <span className="text-black">Ceremony</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-black">5:30 PM</span>
-                  <span className="text-black">Cocktail Hour</span>
+                  <span className="text-black">6:30 PM</span>
+                  <span className="text-black">Vin d'honneur</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-black">7:00 PM</span>
-                  <span className="text-black">Reception</span>
+                  <span className="text-black">8:00 PM</span>
+                  <span className="text-black">Dinner & Dancing</span>
                 </div>
               </div>
             </div>
             
             <div>
               <h2 className="text-lg font-medium text-black mb-4">Dress Code</h2>
-              <p className="text-black">Cocktail Attire</p>
-              <p className="text-black">Semi-formal to formal</p>
+              <p className="text-black">Elegant Garden Party</p>
+              <p className="text-black">Think French countryside chic</p>
             </div>
             
             <div>
               <h2 className="text-lg font-medium text-black mb-4">Transportation</h2>
-              <p className="text-black">Shuttle from Hotel Centrale at 3:15 PM</p>
-              <p className="text-black">Valet parking available</p>
+              <p className="text-black">Shuttle from Carcassonne at 4:00 PM</p>
+              <p className="text-black">Parking available at the château</p>
             </div>
             
             <div>
               <h2 className="text-lg font-medium text-black mb-4">Accommodation</h2>
-              <p className="text-black">Hotel Centrale - €120/night</p>
-              <p className="text-black">Villa Toscana B&B</p>
+              <p className="text-black">Hôtel de la Cité - Carcassonne</p>
+              <p className="text-black">Les Jardins du Minervois B&B</p>
             </div>
           </div>
         </div>
