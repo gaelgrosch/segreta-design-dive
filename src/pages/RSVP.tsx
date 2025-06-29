@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { useToast } from "@/hooks/use-toast";
+import { supabase, type RSVPData } from '@/lib/supabase';
 import WeddingHeader from '@/components/WeddingHeader';
 import MinimalInput from '@/components/MinimalInput';
 import MinimalRadio from '@/components/MinimalRadio';
@@ -9,6 +10,7 @@ import MinimalTextarea from '@/components/MinimalTextarea';
 
 const RSVP = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -24,13 +26,82 @@ const RSVP = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('RSVP Form Data:', formData);
-    toast({
-      title: "RSVP Submitted Successfully!",
-      description: "Thank you for your response. We can't wait to celebrate with you!",
-    });
+    setIsSubmitting(true);
+
+    try {
+      // Transform form data to match database schema
+      const rsvpData: Omit<RSVPData, 'id' | 'createdAt'> = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone || undefined,
+        attendance: formData.attendance as 'yes' | 'no',
+        plusOne: formData.plusOne,
+        plusOneName: formData.plusOne ? formData.plusOneName || undefined : undefined,
+        dietaryRestrictions: formData.dietaryRestrictions || undefined,
+        mealPreference: formData.mealPreference || undefined,
+        songRequest: formData.songRequest || undefined,
+        specialAccommodations: formData.specialAccommodations || undefined,
+        message: formData.message || undefined,
+      };
+
+      const { error } = await supabase
+        .from('rsvps')
+        .insert([
+          {
+            first_name: rsvpData.firstName,
+            last_name: rsvpData.lastName,
+            email: rsvpData.email,
+            phone: rsvpData.phone,
+            attendance: rsvpData.attendance,
+            plus_one: rsvpData.plusOne,
+            plus_one_name: rsvpData.plusOneName,
+            dietary_restrictions: rsvpData.dietaryRestrictions,
+            meal_preference: rsvpData.mealPreference,
+            song_request: rsvpData.songRequest,
+            special_accommodations: rsvpData.specialAccommodations,
+            message: rsvpData.message,
+          }
+        ])
+        .select();
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "RSVP Submitted Successfully!",
+        description: "Thank you for your response. We can't wait to celebrate with you!",
+      });
+
+      // Reset form after successful submission
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        attendance: '',
+        plusOne: false,
+        plusOneName: '',
+        dietaryRestrictions: '',
+        mealPreference: '',
+        songRequest: '',
+        specialAccommodations: '',
+        message: ''
+      });
+
+    } catch (error) {
+      console.error('Error submitting RSVP:', error);
+      toast({
+        title: "Error Submitting RSVP",
+        description: "There was an error submitting your RSVP. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const attendanceOptions = [
@@ -187,9 +258,10 @@ const RSVP = () => {
               <div className="pt-8">
                 <button 
                   type="submit" 
-                  className="text-black border border-black px-8 py-3 hover:bg-black hover:text-white transition-colors"
+                  disabled={isSubmitting}
+                  className="text-black border border-black px-8 py-3 hover:bg-black hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Submit RSVP
+                  {isSubmitting ? 'Submitting...' : 'Submit RSVP'}
                 </button>
               </div>
             </form>
