@@ -15,7 +15,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/segreta-design-dive">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/rsvp" element={<RSVP />} />
