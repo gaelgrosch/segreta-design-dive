@@ -6,30 +6,30 @@ const WeddingHeader = () => {
   const location = useLocation();
   
   return (
-    <header className="bg-white/80 backdrop-blur-sm border-b border-rose-200 sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 py-4">
+    <header className="bg-white border-b border-black">
+      <div className="max-w-7xl mx-auto px-8 py-6">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-2xl font-light text-rose-900 tracking-wide">
+          <Link to="/" className="text-xl font-light text-black tracking-wide">
             Emma & Marco
           </Link>
-          <nav className="space-x-8">
+          <nav className="space-x-12">
             <Link 
               to="/" 
-              className={`text-lg font-light tracking-wide transition-colors ${
+              className={`text-black font-light tracking-wide ${
                 location.pathname === '/' 
-                  ? 'text-rose-800 border-b-2 border-rose-400' 
-                  : 'text-rose-600 hover:text-rose-800'
-              }`}
+                  ? 'border-b border-black pb-1' 
+                  : 'hover:border-b hover:border-black hover:pb-1'
+              } transition-all`}
             >
               Wedding Details
             </Link>
             <Link 
               to="/rsvp" 
-              className={`text-lg font-light tracking-wide transition-colors ${
+              className={`text-black font-light tracking-wide ${
                 location.pathname === '/rsvp' 
-                  ? 'text-rose-800 border-b-2 border-rose-400' 
-                  : 'text-rose-600 hover:text-rose-800'
-              }`}
+                  ? 'border-b border-black pb-1' 
+                  : 'hover:border-b hover:border-black hover:pb-1'
+              } transition-all`}
             >
               RSVP
             </Link>
